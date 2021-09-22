@@ -32,6 +32,22 @@ jobs:
           # CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
         run: npm install && npm run deploy
 
+      - name: FTP Sync files #上传到ftp服务器
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{secrets.FTP_HOST}}
+          username: ${{secrets.FTP_NAME}}
+          password: ${{secrets.FTP_PWD}}
+          local-dir: ./docs/.vuepress/dist
+          server-dir: ./htdocs/
+
+
+
+
+
+
+
+
       # - name: Build and Deploy # 步骤3 （只提交到github可以使用这个步骤）
       #   uses: JamesIves/github-pages-deploy-action@master # 作用：将项目构建和部署到github。 https://github.com/JamesIves/github-pages-deploy-action
       #   env: # 设置环境变量
