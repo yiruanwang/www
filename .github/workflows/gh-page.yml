@@ -14,6 +14,6 @@ jobs:
         TARGET_REPO: yiruanwang/www    # 自己的仓库地址
         TARGET_BRANCH: gh-pages #这是github默认  你可以自己修改称自己的。但是在pages设置中需要修改
         # BUILD_SCRIPT: yarn && yarn run docs:build
-        run: npm install && npm run deploy
+        run: npm install && npm run build
         BUILD_DIR: docs/.vuepress/dist
         CNAME: https://yr.zhizhu.video  #这里修改成自己的 Custom domain
