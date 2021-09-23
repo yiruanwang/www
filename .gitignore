@@ -16,3 +16,5 @@ urls.txt
 
 # mac
 .DS_Store
+# 本地模版不上传
+theme-vdoing

@@ -1,12 +1,13 @@
 {
   "name": "theme-vdoing-blog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh",
     "editFm": "node utils/editFrontmatter.js",
     "baiduPush": "node utils/baiduPush.js https://yr.zhizhu.video && bash baiduPush.sh",
+    "baiduPushwang": "node utils/baiduPushwang.js https://www.yiruan.wang && bash baiduPushwang.sh",
     "publish": "cd ./theme-vdoing && npm publish && cd ../ && npm run updateTheme",
     "updateTheme": "npm uninstall vuepress-theme-vdoing && rm -rf node_modules && npm i && npm i vuepress-theme-vdoing -D"
   },
