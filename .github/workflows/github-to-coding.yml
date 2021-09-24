@@ -4,7 +4,7 @@ on: [push, delete]
 
 
 jobs:
-  mirror_to_gitee:
+  mirror_to_coding:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
