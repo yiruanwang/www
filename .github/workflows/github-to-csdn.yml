@@ -1,0 +1,23 @@
+name: 'GitHub Actions To Csdn'
+
+on: [push, delete]
+
+jobs:
+  mirror_to_csdnchina:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v1
+      - name: 'Mirror to csdn'
+        uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@codechina.csdn.net:yiruanwang/www.git
+          ssh_private_key:
+            ${{ secrets.CSDN_GO }}
+              # ssh-keygen -t rsa -b 2048 -C "email@example.com"
+              # or
+              #ssh-keygen -t ed25519 -C "email@example.com" 
+              #https://codechina.csdn.net/codechina/help-docs/-/wikis/docs/ssh#rsa-ssh-keys
+              # git bash 中敲入命令，会在 ~/.ssh 文件夹下生成 id_rsa.pub【放入csdn】 文件内容和 id_rsa 【github】文件内容，分别存放公钥和私钥
+              # 特别注意：两方仓库的分支要一样。不然要报错。不过不影响。主要看着烦！
