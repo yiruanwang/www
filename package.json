@@ -1,6 +1,6 @@
 {
   "name": "yiruan-wang-blog",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
@@ -9,14 +9,15 @@
     "baiduPush": "node utils/baiduPush.js https://yr.zhizhu.video && bash baiduPush.sh",
     "baiduPushwang": "node utils/baiduPush.js https://www.yiruan.wang && bash baiduPushwang.sh",
     "publish": "cd ./theme-vdoing && npm publish && cd ../ && npm run updateTheme",
-    "updateTheme": "npm uninstall vuepress-theme-vdoing && rm -rf node_modules && npm i && npm i vuepress-theme-vdoing -D"
+    "updateTheme": "npm uninstall vuepress-theme-vdoing && rm -rf node_modules && npm i && npm i vuepress-theme-vdoing -D",
+    "dep:upgrade": "yarn upgrade-interactive --latest"
   },
   "license": "MIT",
   "devDependencies": {
     "dayjs": "^1.9.7",
-    "inquirer": "^7.1.0",
+    "inquirer": "^8.2.0",
     "json2yaml": "^1.1.0",
-    "vuepress": "1.8.0",
+    "vuepress": "1.8.2",
     "vuepress-plugin-baidu-autopush": "^1.0.1",
     "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-demo-block": "^0.7.2",
