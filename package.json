@@ -1,6 +1,6 @@
 {
-  "name": "theme-vdoing-blog",
-  "version": "1.0.2",
+  "name": "yiruan-wang-blog",
+  "version": "1.0.3",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
