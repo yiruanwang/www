@@ -30,6 +30,10 @@ module.exports = [
             link: '/note/git/',
           },
           {
+            text: '《Docker》',
+            link: '/note/docker/',
+          },
+          {
             text: 'TypeScript',
             link: '/pages/51afd6/',
           },
