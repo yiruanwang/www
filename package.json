@@ -1,6 +1,6 @@
 {
   "name": "yiruan-wang-blog",
-  "version": "1.0.33",
+  "version": "1.0.4",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
