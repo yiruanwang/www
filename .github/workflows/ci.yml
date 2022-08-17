@@ -34,14 +34,14 @@ jobs:
           # CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
         run: npm install && npm run deploy
 
-      - name: FTP Sync files #上传到ftp服务器
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
-        with:
-          server: ${{secrets.FTP_HOST}}
-          username: ${{secrets.FTP_NAME}}
-          password: ${{secrets.FTP_PWD}}
-          local-dir: ./docs/.vuepress/dist/
-          server-dir: ./htdocs/
+      # - name: FTP Sync files #上传到ftp服务器
+      #   uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      #   with:
+      #     server: ${{secrets.FTP_HOST}}
+      #     username: ${{secrets.FTP_NAME}}
+      #     password: ${{secrets.FTP_PWD}}
+      #     local-dir: ./docs/.vuepress/dist/
+      #     server-dir: ./htdocs/
 
 
 
