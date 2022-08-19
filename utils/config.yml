@@ -9,11 +9,8 @@ path:
 delete:
   # - tags
 
-metaTitle: #修改title 例：易软资料文档 白嫖 系列
-
-sticky: #推崇 1.2.3.4
  # 要添加、修改front matter的数据 （front matter中没有的数据则添加，已有的数据则覆盖）
 data:
-  author:
-    name: supbose
-    link: https://github.com/supbose
+  # author:
+  #   name: xugaoyi
+  #   link: https://github.com/xugaoyi

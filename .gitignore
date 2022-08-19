@@ -4,6 +4,10 @@ node_modules
 
 # yarn
 yarn.lock
+yarn-error.log
+
+# pnpm
+pnpm-lock.yaml
 
 # vscode
 .vscode
@@ -16,5 +20,3 @@ urls.txt
 
 # mac
 .DS_Store
-# 本地模版不上传
-theme-vdoing
