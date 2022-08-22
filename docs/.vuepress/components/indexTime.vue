@@ -1,8 +1,6 @@
-    <template>
-        <div>
-            
-        </div>
-    </template>
+<template>
+	<div style="display: none"></div>
+</template>
 <script>
 export default {
 	data() {
@@ -18,15 +16,15 @@ export default {
 			let language = navigator.language
 			let domain = document.domain
 			if (domain == 'cn.yiruan.wang' || domain == 'localhost') {
-				// console.log(domain)
+				console.log(domain)
 			} else {
-				// console.log(`1111`)
+				console.log(`1111`)
 				if (language == 'zh-CN') {
 					location.href = '//cn.yiruan.wang'
 				} else {
 					location.href = '//www.yiruan.wang'
 				}
-			}			
+			}
 		}
 	}
 }
