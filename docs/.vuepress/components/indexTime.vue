@@ -1,5 +1,5 @@
 <template>
-	<div style="display: none"></div>
+	<div class="timesindex"></div>
 </template>
 <script>
 export default {
@@ -13,7 +13,8 @@ export default {
 	mounted() {},
 	methods: {
 		userWebUrl() {
-			let language = window.navigator.language
+			if (typeof global.navigator === 'undefined') global.navigator = {};
+			let language = navigator.language
 			let domain = document.domain
 			if (domain == 'cn.yiruan.wang' || domain == 'localhost') {
 				console.log(domain)
@@ -30,4 +31,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style>
+.timesindex{
+	display:none
+}</style>
