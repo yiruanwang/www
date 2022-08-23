@@ -13,7 +13,7 @@ export default {
 	mounted() {},
 	methods: {
 		userWebUrl() {
-			let language = navigator.language
+			let language = window.navigator.language
 			let domain = document.domain
 			if (domain == 'cn.yiruan.wang' || domain == 'localhost') {
 				console.log(domain)
