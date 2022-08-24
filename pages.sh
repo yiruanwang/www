@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-npm run build
+# npm run build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -24,4 +24,4 @@ fi
 git init
 git add -A
 git commit -m "${msg}"
-git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+git push -f $githubUrl web:gh-pages # 推送到github gh-pages分支
