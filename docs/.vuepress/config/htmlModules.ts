@@ -21,6 +21,8 @@ import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
  */
 const htmlModule: VdoingThemeConfig['htmlModules'] = {
 	homeSidebarB: ``
+	// pageT: `测试下呢`,
+	// pageB: `测试底部`
 	// `<div style="padding: 0.95rem">
 	// <p style="
 	//   color: var(--textColor);

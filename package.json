@@ -1,6 +1,6 @@
 {
   "name": "theme-vdoing-blog",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "scripts": {
     "dev": "node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
     "build": "node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
