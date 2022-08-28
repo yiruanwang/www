@@ -12,8 +12,8 @@ const DOMAIN_NAME = 'yiruan.wang' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
-	theme: 'vdoing', // 使用npm主题包
-	// theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
+	// theme: 'vdoing', // 使用npm主题包
+	theme: resolve(__dirname, '../../vdoing'), // 使用本地主题包
 
 	locales: {
 		'/': {
@@ -309,9 +309,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 			'demo-block', // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
 			{
 				settings: {
-					// jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
-					// cssLib: ['http://xxx'], // 在线示例中的css依赖
-					// vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
+					jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
+					cssLib: ['http://xxx'], // 在线示例中的css依赖
+					vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
 					jsfiddle: false, // 是否显示 jsfiddle 链接
 					codepen: true, // 是否显示 codepen 链接
 					horizontal: false // 是否展示为横向样式

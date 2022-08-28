@@ -2,7 +2,7 @@
 	<div class="buttons">
 		<transition name="fade">
 			<div
-				title="返回顶部"
+				title="返回顶部1"
 				class="button blur go-to-top iconfont icon-fanhuidingbu"
 				v-show="showToTop"
 				@click="scrollToTop"
@@ -92,17 +92,14 @@ export default {
 		const pageTo = () => {
 			let language = navigator.language
 			let domain = document.domain
-			let page=window.location.pathname
-
-			// console.log(document);
 			if (domain == 'cn.yiruan.wang' || domain == 'localhost') {
-				console.log(domain+page)
+				console.log(domain)
 			} else {
 				console.log(`1111`)
 				if (language == 'zh-CN') {
-					location.href = '//cn.yiruan.wang'+ page
+					location.href = '//cn.yiruan.wang'
 				} else {
-					location.href = '//www.yiruan.wang'+page
+					location.href = '//www.yiruan.wang'
 				}
 			}
     }

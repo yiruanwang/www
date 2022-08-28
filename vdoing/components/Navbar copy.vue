@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar blur yiruan">
+  <header class="navbar blur">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
 
     <router-link
@@ -64,14 +64,8 @@ export default {
           - (this.$refs.siteName && this.$refs.siteName.offsetWidth || 0)
       }
     }
-    
     handleLinksWrapWidth()
     window.addEventListener('resize', handleLinksWrapWidth, false)
-
-
-
-
-    	
   },
 
   computed: {
