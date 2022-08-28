@@ -522,7 +522,7 @@ function nextAllTipElement(elem) {
 }
 /* 图片中间的签名和标题位置 */
 .banner-conent {
-  margin-top: 23vh !important;
+  /* margin-top: 23vh !important; */
 }
 /* 下面是配合 js 用的 class 样式 */
 .vdoing-index-class .navbar1 {
