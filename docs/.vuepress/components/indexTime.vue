@@ -1,4 +1,4 @@
-<template>	
+<template>
 	<div class="timesindex" style="display: none"></div>
 </template>
 <script>
@@ -6,7 +6,7 @@ export default {
 	data() {
 		return {
 			cnHost: '//cn.yiruan.wang',
-			Host:'//www.yiruan.wang'
+			Host: '//www.yiruan.wang'
 		}
 	},
 	// created() {
@@ -29,12 +29,13 @@ export default {
 
 	},
 	methods: {
-	
+
 	}
 }
 </script>
 
 <style>
-.timesindex{
-	display:none
-}</style>
+.timesindex {
+	display: none
+}
+</style>

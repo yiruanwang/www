@@ -1,41 +1,17 @@
 <template>
 	<div class="buttons">
 		<transition name="fade">
-			<div
-				title="返回顶部1"
-				class="button blur go-to-top iconfont icon-fanhuidingbu"
-				v-show="showToTop"
-				@click="scrollToTop"
-			/>
+			<div title="返回顶部1" class="button blur go-to-top iconfont icon-fanhuidingbu" v-show="showToTop"
+				@click="scrollToTop" />
 		</transition>
-		<div
-			title="去评论"
-			class="button blur go-to-comment iconfont icon-pinglun"
-			v-show="showCommentBut"
-			@click="scrollToComment"
-		/>
-		<div
-			title="主题模式"
-			class="button blur theme-mode-but iconfont icon-zhuti"
-			@mouseenter="showModeBox = true"
-			@mouseleave="showModeBox = false"
-			@click="showModeBox = true"
-		>
+		<div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" v-show="showCommentBut"
+			@click="scrollToComment" />
+		<div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti" @mouseenter="showModeBox = true"
+			@mouseleave="showModeBox = false" @click="showModeBox = true">
 			<transition name="mode">
-				<ul
-					class="select-box"
-					ref="modeBox"
-					v-show="showModeBox"
-					@click.stop
-					@touchstart.stop
-				>
-					<li
-						v-for="item in modeList"
-						:key="item.KEY"
-						class="iconfont"
-						:class="[item.icon, { active: item.KEY === currentMode }]"
-						@click="toggleMode(item.KEY)"
-					>
+				<ul class="select-box" ref="modeBox" v-show="showModeBox" @click.stop @touchstart.stop>
+					<li v-for="item in modeList" :key="item.KEY" class="iconfont"
+						:class="[item.icon, { active: item.KEY === currentMode }]" @click="toggleMode(item.KEY)">
 						{{ item.name }}
 					</li>
 				</ul>
@@ -96,14 +72,14 @@ export default {
 				console.log(domain)
 			} else {
 				console.log(`1111`)
-				if (language == 'zh-CN') {
-					location.href = '//cn.yiruan.wang'
-				} else {
-					location.href = '//www.yiruan.wang'
-				}
+				// if (language == 'zh-CN') {
+				// 	location.href = '//cn.yiruan.wang'
+				// } else {
+				// 	location.href = '//www.yiruan.wang'
+				// }
 			}
-    }
-    pageTo()
+		}
+		pageTo()
 
 		this.currentMode =
 			storage.get('mode') || this.$themeConfig.defaultMode || 'auto'

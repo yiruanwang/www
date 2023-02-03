@@ -18,7 +18,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 	locales: {
 		'/': {
 			lang: 'zh-CN',
-			title: '易软文档资料',
+			title: '拥抱阳光', //'易软文档资料',
 			description:
 				'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。'
 		}
