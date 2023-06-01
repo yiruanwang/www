@@ -75,11 +75,11 @@ export default {
 				console.log(domain + page)
 			} else {
 				console.log(`关闭跳转`)
-				// if (language == 'zh-CN') {
-				// 	location.href = '//cn.yiruan.wang'+ page
-				// } else {
-				// 	location.href = '//www.yiruan.wang'+page
-				// }
+				 if (language == 'zh-CN') {
+				 	location.href = '//cn.yiruan.wang'+ page
+				 } else {
+				 	location.href = '//www.yiruan.wang'+page
+				 }
 			}
 		}
 		pageTo()
