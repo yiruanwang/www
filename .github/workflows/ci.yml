@@ -41,6 +41,9 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          branch: gh-pages
+          folder: out
+          clean: true
           # folder: docs/.vuepress/dist
           ssh-key: ${{ secrets.WWW_TOKENS }}
       - name: Build-and-gh-pages # 步骤3
