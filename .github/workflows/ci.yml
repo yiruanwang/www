@@ -32,4 +32,10 @@ jobs:
         env: 
           GITHUB_TOKEN: ${{ secrets.WWW_TOKENS }}
         run: yarn && yarn deploy
+      - name: 📂 Sync files to cn.yiruan.wang
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_NAME }}
+          password: ${{ secrets.FTP_PWD }}
 

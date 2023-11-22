@@ -13,7 +13,7 @@ cd docs/.vuepress/dist
 echo 'www.yiruan.wang' > CNAME
 
 if [ -z "$GITHUB_TOKEN" ]; then
-  msg='deploy'
+  msg='pages to gh-pages'
   githubUrl=git@github.com:yiruanwang/www.git
 else
   msg='来自github actions的自动部署'
