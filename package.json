@@ -5,7 +5,7 @@
 		"dev": "export NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
 		"build": "export NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
 	 	"ftp:codeup": "node --experimental-json-modules ./config/ftp.config.js",
-		"codeup": "cnpm run build && cnpm run ftp:codeup",
+		"codeup": "yarn build && yarn ftp:codeup",
 		"dev2": "set NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
 		"build2": "set NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
 		"deploy": "bash pages.sh",
