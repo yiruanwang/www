@@ -1,28 +1,41 @@
 <template>
-    <div>
-This time demo!
-    </div>
+	<div class="timesindex" style="display: none"></div>
 </template>
-// 例子<indexTime />在整个vuepress都可以使用
 <script>
 export default {
-    data() {
-        return {
+	data() {
+		return {
+			cnHost: '//cn.yiruan.wang',
+			Host: '//www.yiruan.wang'
+		}
+	},
+	// created() {
+	// 	// console.log('object :>> ', `object`)
+	// 	this.userWebUrl()
+	// },
+	mounted() {
+		// let language = navigator.language
+		// 	let domain = document.domain
+		// 	if (domain == 'cn.yiruan.wang' || domain == 'localhost') {
+		// 		console.log(domain)
+		// 	} else {
+		// 		console.log(`1111`)
+		// 		if (language == 'zh-CN') {
+		// 			location.href = '//cn.yiruan.wang'
+		// 		} else {
+		// 			location.href = '//www.yiruan.wang'
+		// 		}
+		// 	}
 
-        };
-    },
-    created() {
+	},
+	methods: {
 
-    },
-    mounted() {
-
-    },
-    methods: {
-
-    }
-};
+	}
+}
 </script>
 
-<style scoped lang="scss">
-
+<style>
+.timesindex {
+	display: none
+}
 </style>
