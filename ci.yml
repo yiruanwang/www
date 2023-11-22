@@ -1,0 +1,50 @@
+name: CI
+
+on: [push]
+
+# 在master分支发生push事件时触发。
+# on:
+#   push:    
+#     # branches: [ web ]
+#       # - web
+#     tags: 
+#       - v*.*.*
+
+env: # 设置环境变量
+  TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用该时区时间）
+
+jobs:
+  build: # 自定义名称
+    runs-on: ubuntu-latest # 运行在虚拟机环境ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:    
+      - name: Checkout # 步骤1
+        uses: actions/checkout@v3 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+      - name: Use Node.js ${{ matrix.node-version }} # 步骤2
+        uses: actions/setup-node@v2 # 作用：安装nodejs
+        with:
+          node-version: ${{ matrix.node-version }} # 版本
+      - name: Install and Build 🔧 
+        run: |
+          yarn
+          yarn build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs/.vuepress/dist
+          ssh-key: ${{ secrets.WWW_TOKENS }}
+      # - name: Build-and-gh-pages # 步骤3
+      #   env: 
+      #     GITHUB_TOKEN: ${{ secrets.WWW_TOKENS }}
+      #   run: yarn && yarn deploy
+      # - name: 📂 Sync files to cn.yiruan.wang
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      #   with:
+      #     server: ${{ secrets.FTP_HOST }}
+      #     username: ${{ secrets.FTP_NAME }}
+      #     password: ${{ secrets.FTP_PWD }}
+
