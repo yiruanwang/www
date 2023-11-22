@@ -1,4 +1,4 @@
-name: CI
+name: "正式环境使用"
 
 #on: [push]
 
