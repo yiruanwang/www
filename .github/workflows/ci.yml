@@ -44,11 +44,11 @@ jobs:
           folder: docs/.vuepress/dist
           clean: true
           # folder: docs/.vuepress/dist
-          ssh-key: ${{ secrets.WWW_TOKENS }}
-      - name: Build-and-gh-pages # 步骤3
-        env:
-          GITHUB_TOKEN: ${{ secrets.WWW_TOKENS }}
-        run: yarn && yarn deploy
+          # ssh-key: ${{ secrets.WWW_TOKENS }}
+      # - name: Build-and-gh-pages # 步骤3
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.WWW_TOKENS }}
+      #   run: yarn && yarn deploy
       - name: 📂 Sync files to cn.yiruan.wang
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
