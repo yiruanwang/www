@@ -3,7 +3,7 @@
 	"version": "2.0.32",
 	"scripts": {
 		"ftp:codeup": "node --experimental-json-modules ./scripts/ftp.config.js",
-		"codeup": "yarn build && yarn ftp:codeup",
+		"codeup": "cnpm run build && cnpm run ftp:codeup",
 		"dev": "node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
 		"build": "node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
 		"deploy": "bash pages.sh",
