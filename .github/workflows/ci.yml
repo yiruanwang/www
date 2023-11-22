@@ -3,10 +3,16 @@ name: CI
 #on: [push]
 
 # 在master分支发生push事件时触发。
+# on:
+#   push:
+#     branches:
+#       - master
 on:
   push:
-    branches:
-      - master
+    # branches: [ master ]
+    # - master
+    tags:
+      - v*.*.*
 
 env: # 设置环境变量
   TZ: Asia/Shanghai # 时区（设置时区可使页面中的`最近更新时间`使用该时区时间）
@@ -28,26 +34,22 @@ jobs:
           node-version: ${{ matrix.node-version }} # 版本
       - name: Build-and-deploy # 步骤3
         run: |
-          remote_addr=`git remote get-url --push origin`
-          commit_info=`git describe --all --always --long`
-          user_name=`git log -1 --pretty=format:'%an'`
-          user_email=`git log -1 --pretty=format:'%ae'`
-          deploy_branch=gh-pages
           yarn
           yarn build
-        #cd docs/.vuepress/dist
-        #ls
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: docs/.vuepress/dist
           clean: true
-      - name: 📂 Sync files to cn.yiruan.wang
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_NAME }}
-          password: ${{ secrets.FTP_PWD }}
-          local-dir: docs/.vuepress/dist/
-          dangerous-clean-slate: true
+          # FTP 关闭 (配置无误)
+      # - name: 📂 Sync files to cn.yiruan.wang
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      #   with:
+      #     server: ${{ secrets.FTP_HOST }}
+      #     username: ${{ secrets.FTP_NAME }}
+      #     password: ${{ secrets.FTP_PWD }}
+      #     local-dir: docs/.vuepress/dist/
+      #     # 一般不需要添加,对于有些服务器禁止上传.ftp-deploy-sync-state.json文件的时候需要自定义下
+      #     state-name: "ftp-deploy-sync-state.json"
+      #     # dangerous-clean-slate: true # 删除服务器文件

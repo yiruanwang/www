@@ -1,10 +1,10 @@
 {
 	"name": "theme-vdoing-blog",
-	"version": "2.0.32",
+	"version": "2.0.37",
 	"scripts": {
 		"dev": "export NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
 		"build": "export NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
-	 	"ftp:codeup": "node --experimental-json-modules ./scripts/ftp.config.js",
+	 	"ftp:codeup": "node --experimental-json-modules ./config/ftp.config.js",
 		"codeup": "cnpm run build && cnpm run ftp:codeup",
 		"dev2": "set NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js dev docs",
 		"build2": "set NODE_OPTIONS=--openssl-legacy-provider && node --max_old_space_size=4096 ./node_modules/vuepress/cli.js build docs",
