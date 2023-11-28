@@ -36,6 +36,12 @@ jobs:
         run: |
           yarn
           yarn build
+
+      - name: 拷贝dockerfile
+        run: |
+           echo "拷贝文件开始"
+           cp Dockerfile /docs/.vuepress/dist
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
