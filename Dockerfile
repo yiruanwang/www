@@ -1,0 +1,14 @@
+# 1
+FROM node:12-alpine AS build
+COPY ./ /application/
+WORKDIR /application
+
+# RUN ls
+
+# COPY package.json ./
+# RUN yarn build
+# 2
+FROM nginx:stable-alpine
+COPY --from=build /application /usr/share/nginx/html
+EXPOSE 80
+CMD [ "nginx", "-g","daemon off;"]
