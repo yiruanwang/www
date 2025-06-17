@@ -65,25 +65,25 @@ export default {
     }
   },
   mounted() {
-    const pageTo = () => {
-      let language = navigator.language
-      // domain = location.host;
-      let domain = location.host
-      let page = window.location.pathname
+    // const pageTo = () => {
+    //   let language = navigator.language
+    //   // domain = location.host;
+    //   let domain = location.host
+    //   let page = window.location.pathname
 
-      // console.log(document);
-      if (domain.includes('localhost') || domain.includes('cn.yiruan.wang')) {
-        console.log(domain + page)
-      } else {
-        console.log(`关闭跳转`)
-        if (language == 'zh-CN') {
-          location.href = '//cn.yiruan.wang' + page
-        } else {
-          location.href = '//www.yiruan.wang' + page
-        }
-      }
-    }
-    pageTo()
+    //   // console.log(document);
+    //   if (domain.includes('localhost') || domain.includes('cn.yiruan.wang')) {
+    //     console.log(domain + page)
+    //   } else {
+    //     console.log(`关闭跳转`)
+    //     if (language == 'zh-CN') {
+    //       location.href = '//cn.yiruan.wang' + page
+    //     } else {
+    //       location.href = '//www.yiruan.wang' + page
+    //     }
+    //   }
+    // }
+    // pageTo()
     this.currentMode = storage.get('mode') || this.$themeConfig.defaultMode || 'auto'
     this.scrollTop = this.getScrollTop()
     window.addEventListener('scroll', debounce(() => {
